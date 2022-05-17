@@ -12,5 +12,31 @@
 Итераторы при создании файлов  
 Рекурсивное создание директорий  
 
+**Знакомство с основными командами:**
+* cat
+* echo
+* ls
+* cp
+* mv
+* touch
+* rm
+* cd
+* mkdir
+* rmdir
+* джокерные-символы (Wildcard character)
+
+**Знакомство с вспомогательными коммандами:**
+* man
+* grep
+* less
+* pwd
+* diff
+* file
+* find
+* locate
+* head
+* tail
+* sort
+
 ## Статьи по теме
 [Знакомство с командной строкой](https://tutorial.djangogirls.org/ru/intro_to_command_line/)
