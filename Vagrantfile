@@ -1,3 +1,27 @@
+Скачиваем, устанавливаем Vagrant и VirtualBox, а так же скачиваем образ CentOS_8<br>
+Vagrant       <a href="https://www.vagrantup.com/">Тык!<a><br>
+VirtualBox    <a href="https://www.virtualbox.org/">Тык!</a><br>
+Образ CentOS_8 <a href="https://disk.yandex.ru/d/Py9PYiPZmMzaUA">Тык!</a><br>
+  
+  
+<h2>Открываем CMD</h2>
+
+<h3>Проверяем установку Vagrant</h3>
+vagrant -v<br>
+  
+<h3>Добавляем образ Centos8</h3>
+vagrant box add centos/8 file:///C:\Path\to\file\centos_8.box (подставить свой путь)<br>
+  
+<h3>Создаём и переходим директорию в которой будем работать</h3>
+mkdir C:\VMs\ (Свой путь)<br>
+cd C:\VMs\ (Свой путь) <br> 
+  
+Создать в этой директории файл Vagrantfile
+
+Заполнить Vagrantfile следующим образом
+
+Деплоит три виртуальные машины с hostname control, ansible1, ansible2
+
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -62,3 +86,6 @@ Vagrant.configure("2") do |config|
 	  end
    end
 end
+
+Запуск
+vagrant up
