@@ -14,6 +14,9 @@ https://bellard.org/jslinux/ (есть возможность выбрать н�
 **Быстрый старт**
 * [Vagrant](https://learn.hashicorp.com/collections/vagrant/getting-started)
 * [Git](https://githowto.com/ru) 
+
+#### Зеркало vagrant образов
+* [Зеркало vagrant образов](https://vagrant.comcloud.xyz/boxes/search)
  
 #### Использование локального образа:
 * [Скачать box centos/7](https://disk.yandex.ru/d/1s0pATFHjFWHdA)
