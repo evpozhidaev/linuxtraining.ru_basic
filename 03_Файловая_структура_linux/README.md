@@ -2,9 +2,9 @@
 Дать представление о файловой структуре linux, что такое inode. Разобрать права доступа к файлам и каталогам, специальные биты.
 
 ## Темы
-FHS (The Filesystem Hierarchy Standard)  
-inode - индексный дескриптор
 Права доступа к файлам и каталогам  
+FHS (The Filesystem Hierarchy Standard)  
+inode - индексный дескриптор  
 Специальные биты  
 Posix ACL  
 
