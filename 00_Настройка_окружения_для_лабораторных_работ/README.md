@@ -8,7 +8,7 @@ https://bellard.org/jslinux/ (есть возможность выбрать н�
 
 **Ссылки на необходимый софт**
 * [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
-* [Vagrant](https://www.vagrantup.com/downloads)
+* [Vagrant](https://www.vagrantup.com/downloads) - [Vagrant - Зеркало hashicorp от Yandex](https://hashicorp-releases.yandexcloud.net/vagrant/)
 * [Git](https://git-scm.com/download/)
 
 **Быстрый старт**
