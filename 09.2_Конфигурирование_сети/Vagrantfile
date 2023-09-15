@@ -1,0 +1,31 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  # configure two machines web server
+  (1..2).each do |i|
+	  
+    config.vm.define "nginx#{i}" do |node|
+      node.vm.box = "centos/8"
+      node.vm.hostname = "nginx#{i}.example.com"
+      node.vm.network "forwarded_port", guest: 22, host: "222#{i}", id: "ssh"
+      node.vm.network "forwarded_port", guest: 80, host: "808#{i}"
+      node.vm.network "forwarded_port", guest: 443, host: "844#{i}"
+      node.vm.network "private_network", ip: "192.168.200.10#{i}", :device => "eth2", :adapter => 2, :netmask => "255.255.255.0"
+      node.vm.network "private_network", ip: "172.16.0.10#{i}", auto_config: false
+      node.vm.network "private_network", ip: "172.16.0.10#{i}", auto_config: false 
+		
+      # Provisioning with shell
+      node.vm.provision "shell", inline: "sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-Linux-*" 
+      node.vm.provision "shell", inline: "sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-Linux-*"
+
+      node.vm.provider "virtualbox" do |vb|
+	vb.gui = false
+	vb.cpus = 1
+        vb.memory = "256"
+      end
+    
+    end
+  end
+end
