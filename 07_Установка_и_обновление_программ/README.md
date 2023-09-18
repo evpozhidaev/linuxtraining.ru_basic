@@ -17,5 +17,7 @@ man -k
 
 ## Статьи по теме
 [Шпаргалка yum](https://habr.com/ru/post/301292/)
+
 [Документация по apt](https://help.ubuntu.ru/wiki/apt)
+
 [Лекция по пакетным менеджерам](https://youtu.be/HdB39dL0DbE?list=PLrCZzMib1e9rx3HmaLQfLYb9ociIvYOY1)
