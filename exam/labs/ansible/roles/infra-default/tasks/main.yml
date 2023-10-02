@@ -1,0 +1,21 @@
+---
+
+- name: Install packeges
+  ansible.builtin.apt:
+    name:
+      - 'apt-cacher-ng'
+      - 'chrony'
+    state: present
+
+- name: Configure chrony
+  ansible.builtin.template:
+    src: "chrony.conf.j2"
+    dest: "/etc/chrony/chrony.conf"
+
+- name: Start etcd service
+  ansible.builtin.systemd:
+    state: restarted
+    name: "{{ item }}"
+  loop:
+    - "chrony"
+    - "apt-cacher-ng"

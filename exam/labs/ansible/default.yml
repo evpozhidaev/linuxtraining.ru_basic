@@ -1,0 +1,7 @@
+#!/usr/bin/env ansible-playbook
+---
+
+- name: Roles for all host
+  hosts: infra-node
+  roles:
+    - role: infra-default

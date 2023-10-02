@@ -1,0 +1,7 @@
+---
+
+all:
+  hosts:
+    control-node: { ansible_host: 192.168.56.101, ansible_port: '22' }
+    infra-node: { ansible_host: 192.168.56.102, ansible_port: '22' }
+    work-node: { ansible_host: 192.168.56.103, ansible_port: '22' }
